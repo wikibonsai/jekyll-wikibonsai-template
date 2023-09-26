@@ -1,0 +1,18 @@
+# Ruby Gem
+*.gem
+.bundle
+Gemfile.lock
+**/vendor/bundle
+/pkg
+
+# Sass cache
+.sass-cache/
+
+# Jekyll cache & metadata
+.jekyll-cache/
+.jekyll-metadata
+_site/
+
+# macos
+.DS_Store
+

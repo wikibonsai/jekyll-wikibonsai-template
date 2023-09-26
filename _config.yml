@@ -1,0 +1,99 @@
+title: My Bonsai
+description: "A jeyll template for semantically inclined digital gardeners."
+url: "my-bonsai.com"
+#baseurl: ""
+
+theme: jekyll-wikibonsai
+
+include:
+  - "_pages"
+exclude:
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "README.md"
+
+collections:
+  books:
+    output: true
+  entries:
+    output: true
+  index:
+    output: true
+  states:
+    output: true
+    order:
+      - tags.md
+      - sprout.md
+      - bud.md
+      - bamboo.md
+      - bloom.md
+      - berry.md
+      - fruit.md
+      - melon.md
+      - seed.md
+      - tea.md
+      - pot-bamboo.md
+
+# frontmatter
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: "/post/:id/"
+  -
+    scope:
+      type: "books"
+    values:
+      layout: "book"
+      permalink: "/book/:id/"
+  - 
+    scope:
+      type: "entries"
+    values:
+      layout: "entry"
+      permalink: "/entry/:id/"
+  - 
+    scope:
+      # path: "_index/**/*.md"
+      type: "index"
+    values:
+      type: "index"
+      # layout: "index"
+      # permalink: "/index/:id/"
+  - 
+    scope:
+      type: "states"
+    values:
+      layout: "state"
+      permalink: "/stat/:id/"
+
+# plugins
+
+# Google Analytics (ip is anonymized by default)
+ga_tracking: UA-190413040-3
+
+social:
+  connect:
+    enabled: false
+  share:
+    enabled: true
+    type:
+      - 'email'
+      - 'facebook'
+      - 'linkedin'
+      - 'twitter'
+
+bonsai:
+  default_theme: "light"
+  nav:
+    type: "graph"
+    graph:
+      type: "tree"
+  home:
+    notable: 
+      enabled: false 
+    recent: 
+      enabled: true
+      cap: 3
